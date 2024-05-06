@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Restaurant Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: left;
+            text-indent: 150px;
+            padding: -150px;
+        }
+        form {
+            width: 80%;
+            margin: 10px auto;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff702a;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff702a;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+          .logo img {
+            height: 200px; /* Adjust height as needed */
+            width: 200px;
+            margin-left: 450px;
+            margin-bottom: -120px;
+        }    
+    </style>
+</head>
+<body>
+    <header>
+      <a href="#" class="logo">Korean Foods</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/pic3.png" alt="samg Image" />
+        </div>
+        <h2>Restaurant Booking Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="party-size">Party Size:</label>
+            <select id="party-size" name="party-size" required>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10+ people</option>
+            </select>
+
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

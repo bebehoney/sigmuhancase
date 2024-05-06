@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+<style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Korean Foods</a>
+    </header>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sushi Cart</title>
+    <style>
+        /* Add your CSS styles here */
+        #cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .cart-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<br>
+    <h1><p style="text-align:center;color:#FDF5E6;">My Sushi Cart</h1>
+    
+    <div id="cart">
+        <!-- This is where your cart items will be displayed -->
+    </div>
+
+    <div id="Sushi">
+        <!-- Display products with clickable elements -->
+        <div class="Sushi">
+            <h3><p style="color:#FDF5E6;">Sushi 1 - 149</h3>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+        <div class="Sushi">
+            <h3><p style="color:#FDF5E6;">Sushi 2 - 149</h3>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+        <div class="Sushi">
+           <h3><p style="color:#FDF5E6;">Sushi 3 - 149</h3>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+    </div>
+	
+
+    <script>
+        // Sample products
+        var products = [
+            { id: 1, name: "Sushi 1", price: 149 },
+            { id: 2, name: "Sushi 2", price: 149 },
+            { id: 3, name: "Sushi 3", price: 149 }
+        ];
+
+        // Initialize an empty cart
+        var cart = [];
+
+        // Function to add item to cart
+        function addToCart(productId) {
+            var product = products.find(item => item.id === productId);
+            if (product) {
+                cart.push(product);
+                updateCartDisplay();
+            }
+        }
+
+        // Function to update cart display
+        function updateCartDisplay() {
+            var cartDiv = document.getElementById("cart");
+            cartDiv.innerHTML = ""; // Clear the cart
+            cart.forEach(item => {
+                var itemDiv = document.createElement("div");
+                itemDiv.textContent = item.name + - item.price +" Pesos";
+                cartDiv.appendChild(itemDiv);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+

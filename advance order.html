@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }    
+    </style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Food Order Form</title>
+    <style>
+        /* Add your CSS styling here for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+
+        .container {
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            background-color: #feeee7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        select {
+            width: 97%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="number"] {
+            width: 60px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .order-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+</br>
+</br>
+</br>
+</br>
+<body>
+    <header>
+        <a class="logo" href="addtocart.html">BACK</a>
+    </header>
+    <div class="container">
+        <h1>Advance Food Order Form</h1>
+
+        <!-- Order Form -->
+        <form action="process_advance_order.php" method="POST">
+            <!-- Customer Details -->
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+            </div>
+            <div>
+            </div>
+
+            <!-- Delivery Date and Time -->
+            <div>
+                <h2>Booking Date and Time:</h2>
+                <label for="booking_date">Book Date:</label>
+                <input type="date" id="booking_date" name="booking_date" required>
+
+                <label for="booking_time">Book Time:</label>
+                <input type="time" id="booking_time" name="booking_time" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"><a href="verification order.html">Place Advance Order and Booking</button>
+        </form>
+    </div>
+</body>
+
+</html>

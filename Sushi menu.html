@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sushi menu</title>
+	</head>
+<style>
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }   
+
+		/* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#1e1c2a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+			paddding:0;
+            margin: 0;
+        }
+
+        /* Style for the menu box */
+        .menu-box {
+            background-color: #ffe8d6; /* Background color of the menu box */
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menu heading style */ 
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Menu section styles */
+        .menu-section {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for food item names */
+        li span {
+            display: block;
+            font-weight: bold;
+        }		
+    </style>
+<body>
+    <header>
+        <a href="index.html" class="logo">Korean Foods</a>
+    </header>
+
+    <div class="menu-box">
+        <h2>Sushi 1</h2>
+
+        <div class="menu-section">
+            <h3>Temaki</h3>
+            <ul>
+				<li><span>(250g)</span></li>
+            </ul>
+        </div>
+    </div>
+	 <div class="menu-box">
+        <h2>Sushi 2</h2>
+
+        <div class="menu-section">
+            <h3>Makizushi</h3>
+            <ul>
+				<li><span>(250g)</span></li>
+            </ul>
+        </div>
+    </div>
+	<div class="menu-box">
+        <h2>Sushi 3</h2>
+
+        <div class="menu-section">
+            <h3>Uramaki</h3>
+            <ul>				
+				<li><span>(250g)</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

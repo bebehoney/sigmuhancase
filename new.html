@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Korean Foods</a>
+    </header>
+</body>
+</html>
+
+
+<br/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="text-align:center;color:#ffffff;">
+    <h1>Order Verification</h1>
+    <form id="orderForm" action="submit_order.php" method="post" enctype="multipart/form-data"><p style="text-align:left;color:#ffffff;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="image">Capture Image:</label>
+        <input type="file" accept="image/*" capture="camera" id="image" name="image" required><br>
+        <button type="button" id="deleteImage" style="display: none;">Delete Image</button><br>
+        <img id="preview" src="#" alt="Preview" style="display: none; max-width: 300px;"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const imageInput = document.getElementById('image');
+        const deleteButton = document.getElementById('deleteImage');
+        const preview = document.getElementById('preview');
+
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+                deleteButton.style.display = 'block';
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        deleteButton.addEventListener('click', function() {
+            imageInput.value = ''; // Clear the file input
+            preview.src = '#'; // Clear the preview image
+            preview.style.display = 'none'; // Hide the preview image
+            deleteButton.style.display = 'none'; // Hide the delete button
+        });
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(event.target);
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert('Order submitted successfully!');
+            })
+            .catch(error => {
+                console.error('Error submitting order:', error);
+            });
+        });
+    </script>
+</body>
+</html>

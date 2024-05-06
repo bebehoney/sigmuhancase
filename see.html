@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+	<style>
+	/*Style for the"See more"link*/
+	.see.more{
+	color:blue;
+	cursor:pointer;
+	}
+	
+	/*Style for the expanded content*/
+	.expanded-content{
+	display:none;
+	}
+	
+	/*Style for the expanded content when its visible*/
+	.expanded-content-visible{
+	display:block;
+	}
+	</style>
+	</head>
+	<body>
+	<h1>See more Example</h1>
+	<p> This is some introductory text</p>
+	<div class="expanded-content"id="moreContent">
+		<p>This is the expanded content that is initially hidden</p>
+		</div>
+	<p class="see-more" onclick="toggleVisiblity('moreContent')">See more</p>
+	
+	<script>
+	//JavaScript function to toggle visibily
+	functiont toggleVisiblity(id){
+		var element=document.getElementByid(id);
+		element.classList.toggle('visible');
+		}
+	</script>
+	</body>
+	</html>

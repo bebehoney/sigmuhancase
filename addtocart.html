@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Foods </title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">BACK</a>
+    </header>
+</body>
+</html>
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="addtocart.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+
+        <style>
+    .product-title {
+        position: relative;
+        z-index: 1; /* Ensures the title stays on top */
+        cursor: pointer; /* Change cursor to pointer when hovering over the title */
+        
+        } 
+            .details {
+        background-color: #f0f0f0; /* Set the background color */
+        padding: 10px; /* Add padding for better readability */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        margin-top: 10px; /* Add margin to separate from the title */
+        position: absolute; /* Position absolutely */
+        z-index: 1; /* Ensure it appears in front of other elements */
+        width: 100%; /* Make it span the entire width */
+    }
+            
+</style>
+    </head>
+    <body>
+        <div class="header">
+            <p class="menu">MENU</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">₱0.00</h2>
+                </div>
+                <a href="advance order.html" class="btn"><h1>Submit</h1>
+            </div>
+        </div>
+        <script src="addtocart.js"></script>
+    </body>
+</html>

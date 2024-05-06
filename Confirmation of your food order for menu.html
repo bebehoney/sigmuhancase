@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1c2a;
+        }
+        :root{
+            --main-color: #ff702a;
+            --text-color: #000000;
+            --bg-color: #1e1c2a;
+            --big-font: 5rem;
+            --h2-font: 2.25rem;
+            --p-font: 0.9rem;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #feeee7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px -100px;
+            background: var(--bg-color);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .logo{
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: right;
+            text-decoration: none; /* Remove underline */
+        }
+        header .navbar{
+            position: absolute;
+            top: -400px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #2b2640;
+            transition: 3s;
+        }
+        .logo img {
+            height: 100px; /* Adjust height as needed */
+            width: 50px;
+        }    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Korean Foods</a>
+    </header>
+	<style>
+	.cta{
+  background: #feeee7;
+  padding: 70px 0;
+  text-align: center;
+  width: 66%;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+.cta h2{
+  font: 2rem;
+  color: var(--bg-color);
+  margin-bottom: 30px;
+}  
+  .btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.btn:hover{
+  transform: scale(1.2) translateY(10px);
+  transition: .4s;
+}
+  </style>
+	<!-------Call to action------->
+    <section class="cta">
+      <h2><p style="text-align:justify;">
+	  Thank you for ordering now, you can now go to advance order and advance booking.
+	   </br>
+	   </br>
+	   Best Regards, Sigmuhan
+      </h2>
+      <a href="Services" class="btn">Go</a>
+    </section>
+	
+</body>
+</html>
